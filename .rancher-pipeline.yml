@@ -1,0 +1,11 @@
+stages:
+- name: deploy
+  steps:
+  - applyYamlConfig:
+      path: ./worker.yml
+  when:
+    branch:
+      include:
+      - master
+timeout: 60
+notification: {}
